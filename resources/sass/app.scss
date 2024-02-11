@@ -1,5 +1,8 @@
 // CoreUI
 @import '@coreui/coreui/scss/coreui';
+@import '@coreui/coreui/scss/coreui-theme-dark-blue';
+// Optional: Additional styles for CoreUI pro components
+@import '@coreui/coreui-pro/scss/coreui-pro';
 
 //Extra Overrides
 //.c-sidebar {

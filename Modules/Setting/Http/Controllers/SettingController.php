@@ -27,6 +27,7 @@ class SettingController extends Controller
     public function update(StoreSettingsRequest $request) {
         Setting::firstOrFail()->update([
             'company_name' => $request->company_name,
+            'store_name' => $request->store_name,
             'company_email' => $request->company_email,
             'company_phone' => $request->company_phone,
             'notification_email' => $request->notification_email,

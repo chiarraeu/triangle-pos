@@ -53,3 +53,6 @@ $app->singleton(
 */
 
 return $app;
+
+class_alias('Barryvdh\Snappy\Facades\SnappyPdf', 'PDF');
+$app->register(Barryvdh\Snappy\LumenServiceProvider::class);

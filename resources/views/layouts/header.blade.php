@@ -9,9 +9,8 @@
 </button>
 
 <ul class="c-header-nav ml-auto">
-    {{ date(' H:i:s Y-m-d') }}
-
-</ul>
+   {{ now('GMT+2')->format('H:i d-m-Y'); }}
+    </ul>
 <ul class="c-header-nav ml-auto mr-4">
     @can('create_pos_sales')
         <li class="c-header-nav-item mr-3">
@@ -81,3 +80,5 @@
         </div>
     </li>
 </ul>
+
+

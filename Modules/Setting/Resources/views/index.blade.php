@@ -31,6 +31,12 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
+                                        <label for="company_name">Име на обекта <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="company_name" value="{{ $settings->store_name }}" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
                                         <label for="company_email">Company Email <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="company_email" value="{{ $settings->company_email }}" required>
                                     </div>
