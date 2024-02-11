@@ -8,8 +8,8 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item active">Profile</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">Начало</a></li>
+        <li class="breadcrumb-item active">Профил</li>
     </ol>
 @endsection
 
@@ -18,8 +18,8 @@
         <div class="row">
             <div class="col-12">
                 @include('utils.alerts')
-                <h3>Hello, <span class="text-primary">{{ auth()->user()->name }}</span></h3>
-                <p class="font-italic">Change your profile information & password from here...</p>
+                <h3>Здравей, <span class="text-primary">{{ auth()->user()->name }}</span></h3>
+                <p class="font-italic">Променете информацията и паролата на вашия профил от тук...</p>
             </div>
             <div class="col-lg-6">
                 <div class="card">
@@ -29,13 +29,13 @@
                             @method('patch')
 
                             <div class="form-group">
-                                <label for="image">Profile Image <span class="text-danger">*</span></label>
+                                <label for="image">Лого <span class="text-danger">*</span></label>
                                 <img style="width: 100px;height: 100px;" class="d-block mx-auto img-thumbnail img-fluid rounded-circle mb-2" src="{{ auth()->user()->getFirstMediaUrl('avatars') }}" alt="Profile Image">
                                 <input id="image" type="file" name="image" data-max-file-size="500KB">
                             </div>
 
                             <div class="form-group">
-                                <label for="name">Name <span class="text-danger">*</span></label>
+                                <label for="name">Име <span class="text-danger">*</span></label>
                                 <input class="form-control" type="text" name="name" required value="{{ auth()->user()->name }}">
                                 @error('name')
                                 <p class="text-danger">{{ $message }}</p>
@@ -49,7 +49,7 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Update Profile <i class="bi bi-check"></i></button>
+                                <button type="submit" class="btn btn-primary"> Актуализиране на профила <i class="bi bi-check"></i></button>
                             </div>
                         </form>
                     </div>
@@ -62,28 +62,28 @@
                             @csrf
                             @method('patch')
                             <div class="form-group">
-                                <label for="current_password">Current Password <span class="text-danger">*</span></label>
+                                <label for="current_password">Настояща парола <span class="text-danger">*</span></label>
                                 <input type="password" class="form-control" name="current_password" required>
                                 @error('current_password')
                                 <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="password">New Password <span class="text-danger">*</span></label>
+                                <label for="password">Нова парола <span class="text-danger">*</span></label>
                                 <input class="form-control" type="password" name="password" required>
                                 @error('password')
                                 <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="password_confirmation">Confirm Password <span class="text-danger">*</span></label>
+                                <label for="password_confirmation">Потвърди паролата <span class="text-danger">*</span></label>
                                 <input class="form-control" type="password" name="password_confirmation" required>
                                 @error('password_confirmation')
                                 <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Update Password <i class="bi bi-check"></i></button>
+                                <button type="submit" class="btn btn-primary">Актуализирайте паролата <i class="bi bi-check"></i></button>
                             </div>
                         </form>
                     </div>
