@@ -9,7 +9,11 @@
         "anayarojo/shoppingcart": "^4.2",
         "barryvdh/laravel-snappy": "^1.0",
         "guzzlehttp/guzzle": "^7.0.1",
+<<<<<<< HEAD
         "h4cc/wkhtmltopdf-amd64": "0.12.x",
+=======
+        "h4cc/wkhtmltopdf-amd64": "^0.12.4",
+>>>>>>> ab6acf710fa067857eb2922b818ab767ab3a2dcd
         "joedixon/laravel-translation": "^2.2",
         "laravel/framework": "^10.0",
         "laravel/tinker": "^2.5",

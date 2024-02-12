@@ -4,7 +4,7 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">Начало</a></li>
         <li class="breadcrumb-item active">Settings</li>
     </ol>
 @endsection
@@ -16,7 +16,7 @@
                 @include('utils.alerts')
                 <div class="card">
                     <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">General Settings</h5>
+                        <h5 class="mb-0">Общи настройки</h5>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('settings.update') }}" method="POST">
@@ -25,12 +25,13 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="company_name">Company Name <span class="text-danger">*</span></label>
+                                        <label for="company_name">Име на фирма <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="company_name" value="{{ $settings->company_name }}" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
+<<<<<<< HEAD
                                         <label for="company_name">Име на обекта <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="store_name" value="{{ $settings->store_name }}" required>
                                     </div>
@@ -38,12 +39,15 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label for="company_email">Company Email <span class="text-danger">*</span></label>
+=======
+                                        <label for="company_email">Фирмен имейл <span class="text-danger">*</span></label>
+>>>>>>> ab6acf710fa067857eb2922b818ab767ab3a2dcd
                                         <input type="text" class="form-control" name="company_email" value="{{ $settings->company_email }}" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="company_phone">Company Phone <span class="text-danger">*</span></label>
+                                        <label for="company_phone">Служебен телефон <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="company_phone" value="{{ $settings->company_phone }}" required>
                                     </div>
                                 </div>
@@ -52,7 +56,7 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="default_currency_id">Default Currency <span class="text-danger">*</span></label>
+                                        <label for="default_currency_id">Валута по подразбиране <span class="text-danger">*</span></label>
                                         <select name="default_currency_id" id="default_currency_id" class="form-control" required>
                                             @foreach(\Modules\Currency\Entities\Currency::all() as $currency)
                                                 <option {{ $settings->default_currency_id == $currency->id ? 'selected' : '' }} value="{{ $currency->id }}">{{ $currency->currency_name }}</option>
@@ -71,7 +75,7 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="notification_email">Notification Email <span class="text-danger">*</span></label>
+                                        <label for="notification_email">Имейл за уведомяване <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="notification_email" value="{{ $settings->notification_email }}" required>
                                     </div>
                                 </div>
@@ -80,14 +84,14 @@
                             <div class="form-row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label for="company_address">Company Address <span class="text-danger">*</span></label>
+                                        <label for="company_address">Адрес на фирмата <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="company_address" value="{{ $settings->company_address }}">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group mb-0">
-                                <button type="submit" class="btn btn-primary"><i class="bi bi-check"></i> Save Changes</button>
+                                <button type="submit" class="btn btn-primary"><i class="bi bi-check"></i> Запазите промените</button>
                             </div>
                         </form>
                     </div>
