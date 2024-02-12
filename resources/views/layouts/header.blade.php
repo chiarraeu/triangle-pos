@@ -9,14 +9,11 @@
 </button>
 
 <ul class="c-header-nav ml-auto">
-<<<<<<< HEAD
-   {{ now('GMT+2')->format('H:i d-m-Y'); }}
-    </ul>
-=======
-    {{ date(' H:i:s Y-m-d') }}
+
+   {{ now()->format('H:i d-m-Y'); }}
 
 </ul>
->>>>>>> ab6acf710fa067857eb2922b818ab767ab3a2dcd
+
 <ul class="c-header-nav ml-auto mr-4">
     @can('create_pos_sales')
         <li class="c-header-nav-item mr-3">

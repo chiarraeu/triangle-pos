@@ -31,17 +31,14 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-<<<<<<< HEAD
+
                                         <label for="company_name">Име на обекта <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="store_name" value="{{ $settings->store_name }}" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="company_email">Company Email <span class="text-danger">*</span></label>
-=======
                                         <label for="company_email">Фирмен имейл <span class="text-danger">*</span></label>
->>>>>>> ab6acf710fa067857eb2922b818ab767ab3a2dcd
                                         <input type="text" class="form-control" name="company_email" value="{{ $settings->company_email }}" required>
                                     </div>
                                 </div>
