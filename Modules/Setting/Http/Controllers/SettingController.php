@@ -30,6 +30,9 @@ class SettingController extends Controller
             'store_name' => $request->store_name,
             'company_email' => $request->company_email,
             'company_phone' => $request->company_phone,
+            'company_eik' => $request->company_eik,
+            'company_vat' => $request->company_vat,
+            'company_mol' => $request->company_mol,
             'notification_email' => $request->notification_email,
             'company_address' => $request->company_address,
             'default_currency_id' => $request->default_currency_id,
@@ -38,7 +41,7 @@ class SettingController extends Controller
 
         cache()->forget('settings');
 
-        toast('Settings Updated!', 'info');
+        toast('Промените са записани успешно!', 'info');
 
         return redirect()->route('settings.index');
     }

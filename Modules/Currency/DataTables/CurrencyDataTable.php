@@ -37,32 +37,38 @@ class CurrencyDataTable extends DataTable
                 Button::make('excel')
                     ->text('<i class="bi bi-file-earmark-excel-fill"></i> Excel'),
                 Button::make('print')
-                    ->text('<i class="bi bi-printer-fill"></i> Print'),
+                    ->text('<i class="bi bi-printer-fill"></i> Печат'),
                 Button::make('reset')
-                    ->text('<i class="bi bi-x-circle"></i> Reset'),
+                    ->text('<i class="bi bi-x-circle"></i> Зануляване'),
                 Button::make('reload')
-                    ->text('<i class="bi bi-arrow-repeat"></i> Reload')
+                    ->text('<i class="bi bi-arrow-repeat"></i> Презареждане')
             );
     }
 
     protected function getColumns() {
         return [
             Column::make('currency_name')
+                ->title('Валута')
                 ->className('text-center align-middle'),
 
             Column::make('code')
+                ->title('Код')
                 ->className('text-center align-middle'),
 
             Column::make('symbol')
+                ->title('Символ')
                 ->className('text-center align-middle'),
 
             Column::make('thousand_separator')
+                ->title('Разделител за хилядни')
                 ->className('text-center align-middle'),
 
             Column::make('decimal_separator')
+                ->title('Разделител за десетични')
                 ->className('text-center align-middle'),
 
             Column::computed('action')
+                ->title('Действия')
                 ->exportable(false)
                 ->printable(false)
                 ->className('text-center align-middle'),

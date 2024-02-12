@@ -16,7 +16,11 @@ class CreateSettingsTable extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->string('company_name');
+            $table->string('store_name');
             $table->string('company_email');
+            $table->string('company_vat');
+            $table->string('company_eik');
+            $table->string('company_mol');
             $table->string('company_phone');
             $table->string('site_logo')->nullable();
             $table->integer('default_currency_id');

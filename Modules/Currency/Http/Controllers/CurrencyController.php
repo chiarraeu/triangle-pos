@@ -47,7 +47,7 @@ class CurrencyController extends Controller
             'exchange_rate' => $request->exchange_rate
         ]);
 
-        toast('Currency Created!', 'success');
+        toast('Валутата е добавена успешно!', 'success');
 
         return redirect()->route('currencies.index');
     }

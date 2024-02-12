@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Edit Settings')
+@section('title', 'Настройки на системата')
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">Начало</a></li>
-        <li class="breadcrumb-item active">Settings</li>
+        <li class="breadcrumb-item active">Настройки</li>
     </ol>
 @endsection
 
@@ -48,6 +48,18 @@
                                         <input type="text" class="form-control" name="company_phone" value="{{ $settings->company_phone }}" required>
                                     </div>
                                 </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="company_phone"> ЕИК <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="company_eik" value="{{ $settings->company_eik }}" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="company_phone"> Номер по ДДС <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="company_vat" value="{{ $settings->company_vat }}" required>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="form-row">
@@ -63,10 +75,10 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="default_currency_position">Default Currency Position <span class="text-danger">*</span></label>
+                                        <label for="default_currency_position"> Позиция на символ за валута <span class="text-danger">*</span></label>
                                         <select name="default_currency_position" id="default_currency_position" class="form-control" required>
-                                            <option {{ $settings->default_currency_position == 'prefix' ? 'selected' : '' }} value="prefix">Prefix</option>
-                                            <option {{ $settings->default_currency_position == 'suffix' ? 'selected' : '' }} value="suffix">Suffix</option>
+                                            <option {{ $settings->default_currency_position == 'prefix' ? 'selected' : '' }} value="prefix">Преди цената</option>
+                                            <option {{ $settings->default_currency_position == 'suffix' ? 'selected' : '' }} value="suffix">След цената</option>
                                         </select>
                                     </div>
                                 </div>
@@ -83,6 +95,12 @@
                                     <div class="form-group">
                                         <label for="company_address">Адрес на фирмата <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="company_address" value="{{ $settings->company_address }}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label for="company_address"> МОЛ <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="company_mol" value="{{ $settings->company_mol }}">
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +126,7 @@
                 @endif
                 <div class="card">
                     <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">Mail Settings</h5>
+                        <h5 class="mb-0">Настрйки на емайл</h5>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('settings.smtp.update') }}" method="POST">
@@ -178,7 +196,7 @@
                             </div>
 
                             <div class="form-group mb-0">
-                                <button type="submit" class="btn btn-primary"><i class="bi bi-check"></i> Save Changes</button>
+                                <button type="submit" class="btn btn-primary"><i class="bi bi-check"></i> Запази промените </button>
                             </div>
                         </form>
                     </div>

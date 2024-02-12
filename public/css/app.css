@@ -18,7 +18,7 @@
     --dark: #636f83;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;f
+    --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
     --breakpoint-xxl: 1400px;
@@ -36,7 +36,7 @@
     --light: #ebedef;
     --dark: #636f83;
     --color: #3c4b64;
-    background-color: #ffffff;
+    background-color: linear-gradient(180deg, rgba($white, .15), rgba($white, 0));
     color: #3c4b64
 }
 
