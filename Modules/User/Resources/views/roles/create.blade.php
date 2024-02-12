@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Create Role')
+@section('title', 'Задаване на правомощия')
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('roles.index') }}">Roles</a></li>
-        <li class="breadcrumb-item active">Create</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">Начало</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('roles.index') }}">Потребителски правомощия</a></li>
+        <li class="breadcrumb-item active">Създай</li>
     </ol>
 @endsection
 
@@ -26,26 +26,26 @@
                 <form action="{{ route('roles.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Create Role <i class="bi bi-check"></i>
+                        <button type="submit" class="btn btn-primary">Задаване на правомощия <i class="bi bi-check"></i>
                         </button>
                     </div>
                     <div class="card">
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="name">Role Name <span class="text-danger">*</span></label>
+                                <label for="name">Роля <span class="text-danger">*</span></label>
                                 <input class="form-control" type="text" name="name" required>
                             </div>
 
                             <hr>
 
                             <div class="form-group">
-                                <label for="permissions">Permissions <span class="text-danger">*</span></label>
+                                <label for="permissions">Правомощия <span class="text-danger">*</span></label>
                             </div>
 
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="select-all">
-                                    <label class="custom-control-label" for="select-all">Give All Permissions</label>
+                                    <label class="custom-control-label" for="select-all">Задай пълни правомощия</label>
                                 </div>
                             </div>
 
@@ -54,7 +54,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Dashboard
+                                            Табло
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -63,7 +63,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_total_stats" name="permissions[]"
                                                                value="show_total_stats" {{ old('show_total_stats') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_total_stats">Total Stats</label>
+                                                        <label class="custom-control-label" for="show_total_stats">Обща статистика</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -71,7 +71,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_notifications" name="permissions[]"
                                                                value="show_notifications" {{ old('show_notifications') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_notifications">Notifications</label>
+                                                        <label class="custom-control-label" for="show_notifications">Известия</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -79,7 +79,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_month_overview" name="permissions[]"
                                                                value="show_month_overview" {{ old('show_month_overview') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_month_overview">Month Overview</label>
+                                                        <label class="custom-control-label" for="show_month_overview">Месечна статистика</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -87,7 +87,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_weekly_sales_purchases" name="permissions[]"
                                                                value="show_weekly_sales_purchases" {{ old('show_weekly_sales_purchases') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_weekly_sales_purchases">Weekly Sales & Purchases</label>
+                                                        <label class="custom-control-label" for="show_weekly_sales_purchases">Седмични продажби & Покупки</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -95,7 +95,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_monthly_cashflow" name="permissions[]"
                                                                value="show_monthly_cashflow" {{ old('show_monthly_cashflow') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_monthly_cashflow">Monthly Cashflow</label>
+                                                        <label class="custom-control-label" for="show_monthly_cashflow">Месечен отчет</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -107,7 +107,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            User Mangement
+                                            Управление на потребители
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -116,7 +116,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="access_user_management" name="permissions[]"
                                                                value="access_user_management" {{ old('access_user_management') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="access_user_management">Access</label>
+                                                        <label class="custom-control-label" for="access_user_management">Достъп</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -124,7 +124,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_own_profile" name="permissions[]"
                                                                value="edit_own_profile" {{ old('edit_own_profile') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_own_profile">Own Profile</label>
+                                                        <label class="custom-control-label" for="edit_own_profile">Собствен профил</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -136,7 +136,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Products
+                                            Продукти
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -145,7 +145,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="access_products" name="permissions[]"
                                                                value="access_products" {{ old('access_products') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="access_products">Access</label>
+                                                        <label class="custom-control-label" for="access_products">Достъп</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -153,7 +153,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_products" name="permissions[]"
                                                                value="show_products" {{ old('show_products') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_products">View</label>
+                                                        <label class="custom-control-label" for="show_products">Преглед</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -161,7 +161,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_products" name="permissions[]"
                                                                value="create_products" {{ old('create_products') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_products">Create</label>
+                                                        <label class="custom-control-label" for="create_products">Създаване</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -169,7 +169,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_products" name="permissions[]"
                                                                value="edit_products" {{ old('edit_products') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_products">Edit</label>
+                                                        <label class="custom-control-label" for="edit_products">редактиране</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -177,7 +177,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_products" name="permissions[]"
                                                                value="delete_products" {{ old('delete_products') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_products">Delete</label>
+                                                        <label class="custom-control-label" for="delete_products">Изтрий</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -185,7 +185,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="access_product_categories" name="permissions[]"
                                                                value="access_product_categories" {{ old('access_product_categories') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="access_product_categories">Category</label>
+                                                        <label class="custom-control-label" for="access_product_categories">Категория</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -193,7 +193,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="print_barcodes" name="permissions[]"
                                                                value="print_barcodes" {{ old('print_barcodes') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="print_barcodes">Print Barcodes</label>
+                                                        <label class="custom-control-label" for="print_barcodes">Печат Баркодове</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -205,7 +205,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Adjustments
+                                            Корекции
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -214,7 +214,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="access_adjustments" name="permissions[]"
                                                                value="access_adjustments" {{ old('access_adjustments') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="access_adjustments">Access</label>
+                                                        <label class="custom-control-label" for="access_adjustments">Достъп</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -222,7 +222,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_adjustments" name="permissions[]"
                                                                value="create_adjustments" {{ old('create_adjustments') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_adjustments">Create</label>
+                                                        <label class="custom-control-label" for="create_adjustments">Създаване</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -230,7 +230,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_adjustments" name="permissions[]"
                                                                value="show_adjustments" {{ old('show_adjustments') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_adjustments">View</label>
+                                                        <label class="custom-control-label" for="show_adjustments">Преглед</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -238,7 +238,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_adjustments" name="permissions[]"
                                                                value="edit_adjustments" {{ old('edit_adjustments') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_adjustments">Edit</label>
+                                                        <label class="custom-control-label" for="edit_adjustments">редактиране</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -246,7 +246,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_adjustments" name="permissions[]"
                                                                value="delete_adjustments" {{ old('delete_adjustments') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_adjustments">Delete</label>
+                                                        <label class="custom-control-label" for="delete_adjustments">Изтрий</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -258,7 +258,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Quotaions
+                                            Оферти
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -267,7 +267,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="access_quotations" name="permissions[]"
                                                                value="access_quotations" {{ old('access_quotations') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="access_quotations">Access</label>
+                                                        <label class="custom-control-label" for="access_quotations">Достъп</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -275,7 +275,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_quotations" name="permissions[]"
                                                                value="create_quotations" {{ old('create_quotations') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_quotations">Create</label>
+                                                        <label class="custom-control-label" for="create_quotations">Създаване</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -283,7 +283,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_quotations" name="permissions[]"
                                                                value="show_quotations" {{ old('show_quotations') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_quotations">View</label>
+                                                        <label class="custom-control-label" for="show_quotations">Преглед</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -291,7 +291,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_quotations" name="permissions[]"
                                                                value="edit_quotations" {{ old('edit_quotations') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_quotations">Edit</label>
+                                                        <label class="custom-control-label" for="edit_quotations">редактиране</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -299,7 +299,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_quotations" name="permissions[]"
                                                                value="delete_quotations" {{ old('delete_quotations') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_quotations">Delete</label>
+                                                        <label class="custom-control-label" for="delete_quotations">Изтрий</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -307,7 +307,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="send_quotation_mails" name="permissions[]"
                                                                value="send_quotation_mails" {{ old('send_quotation_mails') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="send_quotation_mails">Send Email</label>
+                                                        <label class="custom-control-label" for="send_quotation_mails">Изпратете електронна поща</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -315,7 +315,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_quotation_sales" name="permissions[]"
                                                                value="create_quotation_sales" {{ old('create_quotation_sales') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_quotation_sales">Sale From Quotation</label>
+                                                        <label class="custom-control-label" for="create_quotation_sales"> Форма за оферти за продажба </label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -327,7 +327,7 @@
                                 <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
-                                            Expenses
+                                            Разходи
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
@@ -336,7 +336,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="access_expenses" name="permissions[]"
                                                                value="access_expenses" {{ old('access_expenses') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="access_expenses">Access</label>
+                                                        <label class="custom-control-label" for="access_expenses">Достъп</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -344,7 +344,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_expenses" name="permissions[]"
                                                                value="create_expenses" {{ old('create_expenses') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_expenses">Create</label>
+                                                        <label class="custom-control-label" for="create_expenses">Създаване</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -352,7 +352,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_expenses" name="permissions[]"
                                                                value="edit_expenses" {{ old('edit_expenses') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_expenses">Edit</label>
+                                                        <label class="custom-control-label" for="edit_expenses">редактиране</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -360,7 +360,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_expenses" name="permissions[]"
                                                                value="delete_expenses" {{ old('delete_expenses') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_expenses">Delete</label>
+                                                        <label class="custom-control-label" for="delete_expenses">Изтрий</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -368,7 +368,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="access_expense_categories" name="permissions[]"
                                                                value="access_expense_categories" {{ old('access_expense_categories') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="access_expense_categories">Category</label>
+                                                        <label class="custom-control-label" for="access_expense_categories">Категория</label>
                                                     </div>
                                                 </div>
                                             </div>
