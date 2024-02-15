@@ -14,6 +14,8 @@
 
 </ul>
 
+
+
 <ul class="c-header-nav ml-auto mr-4">
     @can('create_pos_sales')
         <li class="c-header-nav-item mr-3">
