@@ -1,66 +1,36 @@
 <?php
 
 return [
-
-    /*
-     *
-     * Shared translations.
-     *
-     */
     'title' => 'Triangle POS',
     'next' => 'Next Step',
     'back' => 'Previous',
     'finish' => 'Install',
     'forms' => [
-        'errorTitle' => 'The Following errors occurred:',
+        'errorTitle' => 'The Following errors occurred:'
     ],
-
-    /*
-     *
-     * Home page translations.
-     *
-     */
     'welcome' => [
         'templateTitle' => 'Welcome',
-        'title'   => 'Install Triangle POS',
+        'title' => 'Install Triangle POS',
         'message' => 'Easy Installation and Setup Wizard.',
-        'next'    => 'Check Requirements',
+        'next' => 'Check Requirements'
     ],
-
-    /*
-     *
-     * Requirements page translations.
-     *
-     */
     'requirements' => [
         'templateTitle' => 'Step 1 | Server Requirements',
         'title' => 'Server Requirements',
-        'next'    => 'Check Permissions',
+        'next' => 'Check Permissions'
     ],
-
-    /*
-     *
-     * Permissions page translations.
-     *
-     */
     'permissions' => [
         'templateTitle' => 'Step 2 | Permissions',
         'title' => 'Permissions',
-        'next' => 'Configure Environment',
+        'next' => 'Configure Environment'
     ],
-
-    /*
-     *
-     * Environment page translations.
-     *
-     */
     'environment' => [
         'menu' => [
             'templateTitle' => 'Step 3 | Environment Settings',
             'title' => 'Environment Settings',
             'desc' => 'Please select how you want to configure the apps <code>.env</code> file.',
             'wizard-button' => 'Form Wizard Setup',
-            'classic-button' => 'Classic Text Editor',
+            'classic-button' => 'Classic Text Editor'
         ],
         'wizard' => [
             'templateTitle' => 'Step 3 | Environment Settings | Guided Wizard',
@@ -68,7 +38,7 @@ return [
             'tabs' => [
                 'environment' => 'Environment',
                 'database' => 'Database',
-                'application' => 'Application',
+                'application' => 'Application'
             ],
             'form' => [
                 'name_required' => 'An environment name is required.',
@@ -111,7 +81,6 @@ return [
                 'db_username_placeholder' => 'Database User Name',
                 'db_password_label' => 'Database Password',
                 'db_password_placeholder' => 'Database Password',
-
                 'app_tabs' => [
                     'more_info' => 'More Info',
                     'broadcasting_title' => 'Broadcasting, Caching, Session, &amp; Queue',
@@ -127,7 +96,6 @@ return [
                     'redis_host' => 'Redis Host',
                     'redis_password' => 'Redis Password',
                     'redis_port' => 'Redis Port',
-
                     'mail_label' => 'Mail',
                     'mail_driver_label' => 'Mail Driver',
                     'mail_driver_placeholder' => 'Mail Driver',
@@ -141,49 +109,35 @@ return [
                     'mail_password_placeholder' => 'Mail Password',
                     'mail_encryption_label' => 'Mail Encryption',
                     'mail_encryption_placeholder' => 'Mail Encryption',
-
                     'pusher_label' => 'Pusher',
                     'pusher_app_id_label' => 'Pusher App Id',
                     'pusher_app_id_palceholder' => 'Pusher App Id',
                     'pusher_app_key_label' => 'Pusher App Key',
                     'pusher_app_key_palceholder' => 'Pusher App Key',
                     'pusher_app_secret_label' => 'Pusher App Secret',
-                    'pusher_app_secret_palceholder' => 'Pusher App Secret',
+                    'pusher_app_secret_palceholder' => 'Pusher App Secret'
                 ],
                 'buttons' => [
                     'setup_database' => 'Setup Database',
                     'setup_application' => 'Setup Application',
-                    'install' => 'Install',
-                ],
-            ],
+                    'install' => 'Install'
+                ]
+            ]
         ],
         'classic' => [
             'templateTitle' => 'Step 3 | Environment Settings | Classic Editor',
             'title' => 'Classic Environment Editor',
             'save' => 'Save .env',
             'back' => 'Use Form Wizard',
-            'install' => 'Save and Install',
+            'install' => 'Save and Install'
         ],
         'success' => 'Your .env file settings have been saved.',
-        'errors' => 'Unable to save the .env file, Please create it manually.',
+        'errors' => 'Unable to save the .env file, Please create it manually.'
     ],
-
     'install' => 'Install',
-
-    /*
-     *
-     * Installed Log translations.
-     *
-     */
     'installed' => [
-        'success_log_message' => 'Laravel Installer successfully INSTALLED on ',
+        'success_log_message' => 'Laravel Installer successfully INSTALLED on'
     ],
-
-    /*
-     *
-     * Final page translations.
-     *
-     */
     'final' => [
         'title' => 'Installation Finished',
         'templateTitle' => 'Installation Finished',
@@ -192,56 +146,26 @@ return [
         'console' => 'Application Console Output:',
         'log' => 'Installation Log Entry:',
         'env' => 'Final .env File:',
-        'exit' => 'Click here to exit',
+        'exit' => 'Click here to exit'
     ],
-
-    /*
-     *
-     * Update specific translations
-     *
-     */
     'updater' => [
-        /*
-         *
-         * Shared translations.
-         *
-         */
         'title' => 'Laravel Updater',
-
-        /*
-         *
-         * Welcome page translations for update feature.
-         *
-         */
         'welcome' => [
-            'title'   => 'Welcome To The Updater',
-            'message' => 'Welcome to the update wizard.',
+            'title' => 'Welcome To The Updater',
+            'message' => 'Welcome to the update wizard.'
         ],
-
-        /*
-         *
-         * Welcome page translations for update feature.
-         *
-         */
         'overview' => [
-            'title'   => 'Overview',
+            'title' => 'Overview',
             'message' => 'There is 1 update.|There are :number updates.',
-            'install_updates' => 'Install Updates',
+            'install_updates' => 'Install Updates'
         ],
-
-        /*
-         *
-         * Final page translations.
-         *
-         */
         'final' => [
             'title' => 'Finished',
             'finished' => 'Application\'s database has been successfully updated.',
-            'exit' => 'Click here to exit',
+            'exit' => 'Click here to exit'
         ],
-
         'log' => [
-            'success_message' => 'Laravel Installer successfully UPDATED on ',
-        ],
-    ],
+            'success_message' => 'Laravel Installer successfully UPDATED on'
+        ]
+    ]
 ];
