@@ -198,6 +198,30 @@ class Checkout extends Component
 
         return ['price' => $price, 'unit_price' => $unit_price, 'product_tax' => $product_tax, 'sub_total' => $sub_total];
     }
+// Refactor aproch for price calculate 
+
+/*
+public function calculate($product) {
+    $price = $product['product_price'];
+    $unit_price = $product['product_price'];
+    $product_tax = 0.00;
+    $sub_total = $product['product_price'];
+
+    if ($product['product_tax_type'] == 1) {
+        $product_tax = $price * ($product['product_order_tax'] / 100);
+        $sub_total += $product_tax;
+    } elseif ($product['product_tax_type'] == 2) {
+        $unit_price -= $product_tax;
+    }
+
+    return [
+        'price' => $price,
+        'unit_price' => $unit_price,
+        'product_tax' => $product_tax,
+        'sub_total' => $sub_total
+    ];
+}
+*/
 
     public function updateCartOptions($row_id, $product_id, $cart_item, $discount_amount) {
         Cart::instance($this->cart_instance)->update($row_id, ['options' => [
